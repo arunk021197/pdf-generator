@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="Android/data/${applicationId}/socialsharing_downloads"
+        path="./socialsharing-downloads"/>
+
+    <root-path
+        name="root"
+        path="/"/>
+    <files-path name="files" path="." />
+    <!-- cordova.file.cacheDirectory -->
+    <cache-path name="cache" path="." />
+    <!-- cordova.file.externalDataDirectory -->
+    <external-files-path name="external-files" path="." />
+    <!-- cordova.file.externalCacheDirectory -->
+    <external-cache-path name="external-cache" path="." />
+    <!-- cordova.file.externalRootDirectory -->
+    <external-path name="external" path="." />
+
+    <root-path
+        name="root"
+        path="/"/>
+</paths>

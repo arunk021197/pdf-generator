@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="cordova-pdf-generator" version="2.1.2">
+
+    <name>PDFGenerator</name>
+
+    <engines>
+        <engine name="cordova" version=">=3.4.0"/>
+    </engines>
+
+    <js-module src="www/pdf.js" name="pdf">
+        <clobbers target="cordova.plugins.pdf" />
+        <clobbers target="pugin.pdf"/>
+        <clobbers target="pdf"/>
+    </js-module>
+
+    <platform name="android">
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+			<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+        </config-file>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PDFService">
+                <param name="android-package" value="com.pdf.generator.PDFGenerator"/>
+            </feature>
+        </config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <provider android:authorities="${applicationId}.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.pdf.generator.FileProvider">
+				<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/sharing_paths_new" />
+			</provider>
+        </config-file>
+        <source-file src="src/android/PDFGenerator.java" target-dir="src/com/pdf/generator/"/>
+        <source-file src="src/android/PDFPrinter.java" target-dir="src/com/pdf/generator/"/>
+        <source-file src="src/android/PDFPrinterWebView.java" target-dir="src/com/pdf/generator/"/>
+        <source-file src="src/android/PDFtoBase64.java" target-dir="src/com/pdf/generator/"/>
+        <source-file src="src/android/PDFConfig.java" target-dir="src/com/pdf/generator/"/>
+		<source-file src="src/android/res/xml/sharing_paths_new.xml" target-dir="res/xml" />
+		<source-file src="src/android/FileProvider.java" target-dir="src/com/pdf/generator/"/>
+        <framework src="src/android/XPush.gradle" custom="true" type="gradleReference" />
+    </platform>
+
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/widget">
+            <feature name="pdfService">
+                <param name="ios-package" value="PDFGenerator"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/BNHtmlPdfKit.h"/>
+        <header-file src="src/ios/PDFGenerator.h"/>
+        <source-file src="src/ios/PDFGenerator.m"/>
+        <source-file src="src/ios/BNHtmlPdfKit.m"/>
+
+    </platform>
+</plugin>

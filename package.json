@@ -1,0 +1,33 @@
+{
+  "name": "cordova-pdf-generator",
+  "version": "2.1.2",
+  "description": "is a HTML to PDF (offline) Generator.",
+  "cordova": {
+    "id": "cordova-pdf-generator",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IDPLive/pdf-generator.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    }
+  ],
+  "author": "cesar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IDPLive/pdf-generator/issues"
+  },
+  "homepage": "https://github.com/IDPLive/pdf-generator#readme"
+}
