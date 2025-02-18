@@ -52,17 +52,17 @@
                 </config-file>
         <config-file parent="com.apple.developer.associated-domains" target="*-Debug.plist">
                     <array>
-                        <string>applinks:k6j4.adj.st</string>
+                        <string>applinks:ryt3.adj.st</string>
                         <string>applinks:idplive.go.link</string>
-                        <string>idpScheme:k6j4.adj.st</string>
+                        <string>idpScheme:ryt3.adj.st</string>
                         <string>idpScheme:idplive.go.link</string>
                     </array>
                 </config-file>
                 <config-file parent="com.apple.developer.associated-domains" target="*-Release.plist">
                     <array>
-                        <string>applinks:k6j4.adj.st</string>
+                        <string>applinks:ryt3.adj.st</string>
                         <string>applinks:idplive.go.link</string>
-                        <string>idpScheme:k6j4.adj.st</string>
+                        <string>idpScheme:ryt3.adj.st</string>
                         <string>idpScheme:idplive.go.link</string>
                     </array>
                 </config-file>
