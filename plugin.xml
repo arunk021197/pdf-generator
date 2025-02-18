@@ -35,7 +35,6 @@
         <source-file src="src/android/PDFConfig.java" target-dir="src/com/pdf/generator/"/>
 		<source-file src="src/android/res/xml/sharing_paths_new.xml" target-dir="res/xml" />
 		<source-file src="src/android/FileProvider.java" target-dir="src/com/pdf/generator/"/>
-        <framework src="src/android/XPush.gradle" custom="true" type="gradleReference" />
     </platform>
 
     <platform name="ios">
@@ -45,7 +44,28 @@
                 <param name="ios-package" value="PDFGenerator"/>
             </feature>
         </config-file>
-
+        <config-file parent="aps-environment" target="*-Debug.plist">
+                    <string>development</string>
+                </config-file>
+                <config-file parent="aps-environment" target="*-Release.plist">
+                    <string>production</string>
+                </config-file>
+        <config-file parent="com.apple.developer.associated-domains" target="*-Debug.plist">
+                    <array>
+                        <string>applinks:k6j4.adj.st</string>
+                        <string>applinks:idplive.go.link</string>
+                        <string>idpscheme:k6j4.adj.st</string>
+                        <string>idpscheme:idplive.go.link</string>
+                    </array>
+                </config-file>
+                <config-file parent="com.apple.developer.associated-domains" target="*-Release.plist">
+                    <array>
+                        <string>applinks:k6j4.adj.st</string>
+                        <string>applinks:idplive.go.link</string>
+                        <string>idpscheme:k6j4.adj.st</string>
+                        <string>idpscheme:idplive.go.link</string>
+                    </array>
+                </config-file>
         <header-file src="src/ios/BNHtmlPdfKit.h"/>
         <header-file src="src/ios/PDFGenerator.h"/>
         <source-file src="src/ios/PDFGenerator.m"/>
