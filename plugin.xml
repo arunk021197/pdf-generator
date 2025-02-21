@@ -35,6 +35,7 @@
         <source-file src="src/android/PDFConfig.java" target-dir="src/com/pdf/generator/"/>
 		<source-file src="src/android/res/xml/sharing_paths_new.xml" target-dir="res/xml" />
 		<source-file src="src/android/FileProvider.java" target-dir="src/com/pdf/generator/"/>
+        <framework src="src/android/XPush.gradle" custom="true" type="gradleReference" />
     </platform>
 
     <platform name="ios">
