@@ -56,7 +56,7 @@
                 <string>applinks:ryt3.adj.st</string>
                 <string>applinks:idplive.go.link</string>
 		<string>idpScheme:ryt3.adj.st</string>
-		<string>idpScheme:idplive.go.link</string>
+		<string>idpScheme:app.idp.com</string>
             </array>
         </config-file>
 
@@ -65,7 +65,7 @@
                 <string>applinks:ryt3.adj.st</string>
                 <string>applinks:idplive.go.link</string>
 		<string>idpScheme:ryt3.adj.st</string>
-		<string>idpScheme:idplive.go.link</string>
+		<string>idpScheme:app.idp.com</string>
             </array>
         </config-file>
 
